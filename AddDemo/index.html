@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html ng-app="Add">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add-Demo</title>
+</head>
+<body ng-controller="AddCtrl">
+	<input type="number" id="zahl1" ng-model="zahl1" />
+	<input type="number" id="zahl2" ng-model="zahl2" />
+	Addition von {{zahl1}} und {{zahl2}} ist {{addiere()}}
+<script src="angular/angular.min.js"></script>
+<script src="add.js"></script>
+</body>
+</html>
