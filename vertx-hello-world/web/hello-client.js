@@ -36,7 +36,11 @@ angular.module('hello-world', ['ngAnimate'])
 			$scope.msg ="Message Bus open for your message.";
 			$scope.$apply();
 		}
-			
+		
+		eb.onclose = function() {
+			alert("Server disconnected. Please reload page.");
+		}
+
 	};
 
 	$scope.send = function() {
