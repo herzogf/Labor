@@ -20,11 +20,6 @@ public class IbanController
 	@Autowired
 	private IbanKonverter konverter;
 
-	@RequestMapping(value="/", method=RequestMethod.GET)
-	public String index() {
-		return "Hallo, ich bin der IBAN Konverter";
-	}
-
 	@RequestMapping(value="/iban", method=RequestMethod.GET)
 	public Map<String, String> iban(@RequestParam(value="blz") String blz, @RequestParam(value="kto") String kto) {
 		final String iban = konverter.berechneIbanDE(blz, kto);

@@ -1,0 +1,27 @@
+html, body, .panel {
+	background-color: #011E29;
+	color: white;
+}
+
+.panel .panel-heading {
+	background-color: #049AD2;
+	color: white;
+}
+
+.iban-output.ng-enter {
+  -webkit-transition:1s linear all;
+  transition:1s linear all;
+  background-color: yellow;
+}
+
+.iban-output.ng-enter-active {
+  background-color: white;
+}
+
+.success {
+	background-color: #009900;
+}
+
+.error {
+	background-color: #dd0000;
+}
