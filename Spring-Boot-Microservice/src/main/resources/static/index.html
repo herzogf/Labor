@@ -16,15 +16,15 @@
         <form class="form-inline">
           <div class="form-group">
             <label for="ktoInput">Kontonummer:</label>
-            <input id="ktoInput" type="text" class="form-control" placeholder="enter Kontonummer" ng-model="kto"/>
+            <input id="ktoInput" type="number" class="form-control" placeholder="enter Kontonummer" ng-model="kto"/>
           </div>
           <div class="form-group">
             <label for="blzInput">Bankleitzahl:</label>
-            <input id="blzInput" type="text" class="form-control" placeholder="enter Bankleitzahl" ng-model="blz"/>
+            <input id="blzInput" type="number" class="form-control" placeholder="enter Bankleitzahl" ng-model="blz"/>
           </div>
           <button type="submit" class="btn btn-default" ng-click="convertToIban()"><span class="glyphicon glyphicon-transfer" aria-hidden="true"></span> Convert</button>
         </form>
-        <div class="iban-output">IBAN: {{iban}}</div>
+        <div class="iban-output">IBAN: <span id="ibantext">{{iban}}</span> <button ng-show="iban" class="copy btn btn-default" data-clipboard-target="#ibantext" title=" Copy to Clipboard"><span class="glyphicon glyphicon-copy" aria-hidden="true"></span></button></div>
         <div class="{{msg.type}}"><span class="glyphicon {{msg.icon}}" aria-hidden="true"></span> {{msg.msg}}</div>
       </div>
     </div>
@@ -69,5 +69,9 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular-animate.js"></script>
 <script src="iban-client.js"></script>
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
+<script language="JavaScript">
+new Clipboard('.copy');
+</script>
 </body>
 </html>
