@@ -1,8 +1,0 @@
-.contact-item.ng-enter {
-  -webkit-transition:0.5s linear all;
-  transition:0.5s linear all;
-  background-color: yellow;
-}
-.contact-item.ng-enter-active {
-  background-color: white;
-}
